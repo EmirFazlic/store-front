@@ -1,0 +1,37 @@
+<div class="user">
+  <label for="username">Owner:</label>
+  <span class="username">{{ user.userName }}</span>
+
+  <label for="email">Email:</label>
+  <span class="email">{{ user.email }}</span>
+
+  <label for="phone">Phone</label>
+  <span class="phone">{{ user.phone }}</span>
+
+  <a [routerLink]="['/add-items']" class="btnn btn--small">Add item</a>
+</div>
+
+<div class="container" *ngIf="items.length > 0">
+  <div class="product" *ngFor="let item of items">
+    <img [src]="item.image" alt="product" />
+
+    <h3 class="title">{{ item.title }}</h3>
+    <hr />
+
+    <div class="product-box">
+      <p class="description">{{ item.description }}</p>
+
+      <div class="product-price">
+        <p class="price">
+          Price: <strong>{{ item.price }} </strong>$
+        </p>
+        <a [routerLink]="['/edit', item.id]" class="btnn btn--small">Edit</a>
+        <button (click)="onDelete(item.id)" class="btn btn--small">
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p *ngIf="items.length <= 0">No items added</p>

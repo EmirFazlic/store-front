@@ -1,0 +1,10 @@
+<form class="container" [formGroup]="form" (submit)="onSubmit()" >
+    <p>Enter user name</p>
+    <input type="text" formControlName="userName" placeholder="User name">
+    <hr>
+    <p>Enter password</p>
+    <input type="password" formControlName="password" placeholder="User password">
+    <hr>
+    <a routerLink="/register">Register</a>
+    <button class= "btn-submit" type="submit">Login</button>
+</form>

@@ -1,0 +1,68 @@
+<button (click)="showBuyItemsFun()" class="btnn btn--small">
+  {{ this.showBuyItems }}
+</button>
+
+<div class="container" *ngIf="orders.length > 0">
+  <div class="chair" *ngFor="let order of this.orders">
+    <img src="assets/chair-1.jpg" alt="Chair" />
+    <div class="chair-box">
+      <h3>{{ order.title }}</h3>
+      <p>{{ order.address }}</p>
+
+      <div class="chair-price">
+        <strong>{{ order.price }}</strong>
+        <p *ngIf="order.confirmation">Order confirmed</p>
+        <button
+          *ngIf="!showItems && !order.confirmation"
+          (click)="onConfirmPurchase(order.id)"
+          class="btnn btn--small"
+        >
+          Confirm purches
+        </button>
+        <button
+          *ngIf="showItems"
+          (click)="onDelete(order.id)"
+          class="btnn btn--small"
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" *ngIf="orders.length > 0">
+  <div class="product" *ngFor="let order of this.orders">
+    <img [src]="order.image" alt="product" />
+
+    <h3 class="title">{{ order.title }}</h3>
+    <hr />
+
+    <div class="product-box">
+      <p class="description">{{ order.address }}</p>
+
+      <div class="product-price">
+        <p class="price">
+          Price: <strong>{{ order.price }} </strong>$
+        </p>
+        <p *ngIf="order.confirmation">Order confirmed</p>
+        <button
+          *ngIf="!showItems && !order.confirmation"
+          (click)="onConfirmPurchase(order.id)"
+          class="btnn btn--small"
+        >
+          Confirm purches
+        </button>
+        <button
+          *ngIf="showItems"
+          (click)="onDelete(order.id)"
+          class="btnn btn--small"
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p *ngIf="orders.length === 0">No items</p>

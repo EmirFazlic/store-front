@@ -1,0 +1,14 @@
+<nav>
+    <a class="icon" routerLink="/">Store </a>
+    <div class="containerOne">
+        <a class="navBtn" routerLink="/items">Items </a>
+        <div class="containerTwo">
+            <a *ngIf="!userIsAuthenticated" class="navBtn" routerLink="/login">Login</a>
+            <a *ngIf="!userIsAuthenticated" class="navBtn" routerLink="/register">Register </a>
+            <a *ngIf="userIsAuthenticated" class="navBtn" routerLink="/user">User </a>
+            <a *ngIf="userIsAuthenticated" class="navBtn" routerLink="/orders">Orders </a>
+            <button *ngIf="userIsAuthenticated" class="btn-submit" (click)="onLogout()">Logout</button>
+        </div>
+
+    </div>
+</nav>

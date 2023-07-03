@@ -1,0 +1,133 @@
+.user {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  justify-items: start;
+  align-items: center;
+
+  color: #fddc67;
+  background-color: #212529;
+  height: 300px;
+  width: 1fr;
+  border-radius: 12px;
+  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.301);
+  margin-top: 30px;
+  padding-left: 20px;
+}
+label {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.username,
+.email,
+.phone {
+  border: 1px solid #fddc67;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 40px;
+  column-gap: 40px;
+  justify-items: center;
+  margin: 30px;
+}
+
+.product {
+  background-color: #212529;
+  color: #ffd43b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 18px;
+  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.226);
+  border-radius: 12px;
+}
+
+img {
+  border-radius: 12px;
+  width: 100%;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.product-box {
+  padding: 14px 24px;
+  background-color: #212529;
+  color: #ffd43b;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.title {
+  font-size: 20px;
+  height: 25px;
+  align-self: center;
+  margin: 8px;
+}
+hr {
+  border: 1px solid #ffd43b;
+  background-color: #ffd43b;
+}
+
+.description {
+  height: 40px;
+  align-self: start;
+  font-size: 14px;
+}
+
+.product-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  align-self: flex-start;
+  width: 100%;
+}
+.btn--small {
+  font-size: 14px;
+  padding: 8px 12px;
+}
+
+.btnn:link,
+.btnn:visited,
+.btn {
+  text-decoration: none;
+  color: #ffd43b;
+  font-weight: 500;
+  font-size: 20px;
+  border: 2px solid #ffd43b;
+  padding: 5px 8px;
+  border-radius: 15px;
+  background-color: #212529;
+}
+
+.btnn:hover,
+.btn:hover {
+  background-color: #ffd43b;
+  color: #212529;
+}
+
+.btnn:active,
+.btn:active {
+  box-shadow: 0 0 5px 2px #fddc67;
+}
+
+img {
+  border-radius: 12px;
+  width: 100%;
+}

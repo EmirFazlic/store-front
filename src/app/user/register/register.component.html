@@ -1,0 +1,35 @@
+<div class="box">
+  <h2>Register</h2>
+
+  <form [formGroup]="form" (submit)="onSubmit()">
+    <div class="user-box">
+      <input type="text" formControlName="userName" placeholder="User name" />
+      <label>Enter user name</label>
+    </div>
+    <div class="user-box">
+      <input type="text" formControlName="email" placeholder="Email" />
+      <label>Enter email</label>
+    </div>
+    <div class="user-box">
+      <input type="text" formControlName="phone" placeholder="Phone number" />
+      <label>Enter phone number</label>
+    </div>
+    <div class="user-box">
+      <input
+        type="password"
+        formControlName="password"
+        placeholder="Password"
+      />
+      <label>Enter password</label>
+    </div>
+    <div class="user-box">
+      <input
+        type="password"
+        formControlName="passwordSc"
+        placeholder="Again password"
+      />
+      <label>Enter password again</label>
+    </div>
+    <button class="btn-submit" type="submit">Register</button>
+  </form>
+</div>
